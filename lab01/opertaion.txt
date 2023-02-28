@@ -1,0 +1,13 @@
+multiply: 326400
+multiply: 326400
+multiply: 326400
+multiply: 326400
+sum:73
+sum:73
+multiply: 32000
+subtract: 5
+subtract: 5
+subtract: 0
+subtract: -20
+divide: 2
+divide: 1
