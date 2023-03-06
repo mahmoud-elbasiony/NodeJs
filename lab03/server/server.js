@@ -1,5 +1,5 @@
 // const http=require("http")
-const PORT=process.PORT || 7000;
+const PORT=process.env.PORT || 7000;
 const fs=require("fs")
 let welcomeHtml=fs.readFileSync("../client/welcome.html").toString()
 const path=require("path");
