@@ -1,0 +1,73 @@
+*{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+
+}
+body{
+    border-radius: 10px;
+    background-color: gainsboro;
+
+}
+
+.container{
+    background-color: cadetblue;
+    padding: 4% 0;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid black;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.messages{
+    min-height: 300px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.message{
+    display: flex;
+    max-width: 75%;
+    min-height: 40px;
+    align-items: center;
+    justify-items: flex-start;
+    padding: 5px 15px;
+    background-color: azure;
+    font-size: large;
+    margin-bottom: 15px;
+    line-height: 170%;
+    /* line-break: auto; */
+}
+.inputs{
+    width: 90%;
+}
+.send-message-container,.join-room-container{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
+    align-items: stretch;
+    height: 40px;
+}
+
+input{
+    flex: 1;
+    font-size: large;
+    padding: 3px 15px;
+}
+
+button{
+    background-color: steelblue;
+    min-width: 80px;
+}
+.send{
+    align-self: flex-end;
+    background-color: aquamarine;
+    /* line-break: auto; */
+
+}
