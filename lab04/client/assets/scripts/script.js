@@ -9,7 +9,7 @@ const textMessage=document.querySelector(".send-message-container input")
 // client-side
 socket.on("connect", () => {
     console.log(socket.id); 
-  });
+});
 socket.on("recieve-event", (MSG) => {
     console.log(MSG);
     displayMessage(MSG.message,"");

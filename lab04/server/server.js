@@ -10,18 +10,18 @@ const path=require("path");
 const io = new Server(httpServer, { /* options */ });
 //#region middleware
 app.use(express.static(getPath("../client/assets")))
-console.log(getPath("../client/assets"))
+// console.log(getPath("../client/assets"))
 //#end region
 app.get("/",(req,res)=>{
-    console.log(req.url)
-    console.log(getPath("index.ejs"))
+    // console.log(req.url)
+    // console.log(getPath("index.ejs"))
 
-    res.render(getPath("index.ejs"))
+    res.render(getPath("../index.ejs"))
 })
 io.on("connection", (socket) => {
     console.log(socket.id); 
     socket.on("send-event", (message) => {
-        socket.broadcast.emit("recieve-event",message)
+        socket.broadcast.emit("recieve-event",message);
     });
 });
 
