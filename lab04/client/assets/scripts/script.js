@@ -2,13 +2,25 @@
 // const { io } = require("socket.io-client");
 const socket = io();
 const send=document.getElementById("send");
-const join=document.getElementById("join");
+// const join=document.getElementById("join");
 const messages=document.querySelector(".messages");
 const textMessage=document.querySelector(".send-message-container input")
+const MSG=document.getElementById("msg");
 
+
+MSG.addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+      // Cancel the default action, if needed
+    event.preventDefault();
+      // Trigger the button element with a click
+    send.click();
+    }
+})
 // client-side
-socket.on("connect", () => {
-    console.log(socket.id); 
+// let name=prompt("enter your name");
+socket.on("connect", (name) => {
+    // console.log(socket.id); 
 });
 socket.on("recieve-event", (MSG) => {
     console.log(MSG);
