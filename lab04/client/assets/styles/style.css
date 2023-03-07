@@ -10,6 +10,7 @@ body{
 }
 
 .container{
+
     background-color: cadetblue;
     padding: 4% 0;
     margin: 50px auto;
@@ -22,7 +23,8 @@ body{
     align-items: center;
     justify-content: space-between;
     max-height: 70vh;
-
+    background-image: url("../images/peakpx.jpg");
+    background-size: contain;
 }
 
 .messages{
@@ -42,12 +44,14 @@ body{
     flex-wrap: wrap;
     justify-items: flex-start;
     padding: 10px 15px;
-    background-color: azure;
+    background-color: rgb(3, 32, 8);
     font-size: large;
     margin-bottom: 15px;
     line-height: 170%;
     line-break: auto; 
-    margin-right: 15px;
+    /* margin-right: 15px; */
+    color: white;
+
 }
 .inputs{
     width: 90%;
@@ -56,24 +60,40 @@ body{
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
-    gap:15px;
+    gap:5%;
     align-items: stretch;
     height: 40px;
 }
 
 input{
-    flex: 1;
+    flex: 4;
     font-size: large;
     padding: 3px 15px;
+    background-color: rgb(6, 27, 3);
+    color: white;
+    outline: none;
+    
+
+    
+    
 }
 
 button{
-    background-color: steelblue;
-    min-width: 80px;
+    background-color: rgb(6, 27, 3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.material-symbols-outlined{
+    color: white;
+
 }
 .send{
     align-self: flex-end;
-    background-color: aquamarine;
-    /* line-break: auto; */
+    background-color: rgb(101, 188, 91);
 
 }
