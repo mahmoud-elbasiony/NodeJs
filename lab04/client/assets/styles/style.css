@@ -1,6 +1,8 @@
 *{
     /* border: 1px solid black; */
     border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
 
 }
 body{
@@ -40,9 +42,9 @@ body{
 .message{
     display: flex;
     max-width: 75%;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-items: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-items: center;
     padding: 10px 15px;
     background-color: rgb(3, 32, 8);
     font-size: large;
@@ -52,6 +54,11 @@ body{
     /* margin-right: 15px; */
     color: white;
 
+}
+.name{
+    font-size: large;
+    font-weight: 600;
+    color: orange;
 }
 .inputs{
     width: 90%;

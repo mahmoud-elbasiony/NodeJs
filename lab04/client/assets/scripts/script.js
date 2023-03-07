@@ -18,28 +18,33 @@ MSG.addEventListener("keypress", function(event) {
     }
 })
 // client-side
-// let name=prompt("enter your name");
+let name=prompt("enter your name");
+// let name="ahmed"
+
+while(!name){
+    name=prompt("enter your name");
+}
 socket.on("connect", (name) => {
     // console.log(socket.id); 
 });
 socket.on("recieve-event", (MSG) => {
     console.log(MSG);
-    displayMessage(MSG.message,"");
+    displayMessage(MSG.message.message,MSG.message.name,"");
 });
 
 
 send.addEventListener("click",function(){
     if(textMessage.value!=""){
-        socket.emit("send-event",{ message: textMessage.value });
-        displayMessage(textMessage.value,"send");
+        socket.emit("send-event",{ message: textMessage.value ,name:name});
+        displayMessage(textMessage.value,"","send");
         console.log("sending");
         textMessage.value="";
 
     }
 })
-function displayMessage(txt,style){
-        messages.innerHTML+=messageDiv.replace("{text}",txt).replace("{style}",style);
+function displayMessage(txt,name,style){
+        messages.innerHTML+=messageDiv.replace("{text}",txt).replace("{style}",style).replace("{name}",name);
 }
 
 
-let messageDiv=`<div class="message {style}">{text}</div>`;
+let messageDiv=`<div class="message {style}"><span class="name">{name}</span><div>{text}</div></div>`;
