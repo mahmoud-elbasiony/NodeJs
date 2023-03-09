@@ -28,7 +28,7 @@ socket.on("connect", (name) => {
     // console.log(socket.id); 
 });
 socket.on("recieve-event", (MSG) => {
-    console.log(MSG);
+    // console.log(MSG);
     displayMessage(MSG.message.message,MSG.message.name,"");
 });
 

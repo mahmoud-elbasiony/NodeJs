@@ -21,7 +21,7 @@ app.get("/",(req,res)=>{
 io.on("connection", (socket) => {
     console.log(socket.id); 
     socket.on("send-event", (message) => {
-        console.log(message);
+        // console.log(message);
         socket.broadcast.emit("recieve-event",{message});
     });
 });
