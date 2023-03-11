@@ -16,9 +16,9 @@ const userSchema = {
     },
     password: {
         type: "string",
-        // pattern:"^[a-zA-Z]{5,}$"
+        pattern:"^[0-9a-zA-Z\w]{5,}$",
         minLength: 6,
-        // pattern:"(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+        // pattern:"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
         }
     },
     required: ["name","email","password"],

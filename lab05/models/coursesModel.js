@@ -6,23 +6,16 @@ async function main() {
     // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 main();
-const usersSchema = new mongoose.Schema({
+const coursesSchema = new mongoose.Schema({
     name: {
         type:"String",
         required:true
     },
-    email:{
+    deg:{
         type: "String",
         required:true
-    },
-    password: {
-        type: "String",
-        required:true
-    },
-    isAdmin:{
-        type:"Boolean"
     }
 });
 
 
-module.exports=mongoose.model('users', usersSchema);
+module.exports=mongoose.model('courses', coursesSchema);

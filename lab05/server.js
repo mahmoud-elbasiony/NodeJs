@@ -3,6 +3,8 @@ const express=require("express");
 const path=require("path");
 const studentRouter=require("./routes/studentsRouters")
 const userRouter=require("./routes/usersRouters")
+const Permissions=require("./middleWares/permissions")
+const coursesRouter=require("./routes/coursesRouters")
 
 
 const app=express();
@@ -21,7 +23,7 @@ app.get("*",(req,res,next)=>{
 //#region sudents routes
 app.use("/api/students",studentRouter);
 app.use("/api/users",userRouter);
-
+app.use("/api/courses",coursesRouter);
 
 //#endregion
 
