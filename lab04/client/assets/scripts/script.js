@@ -7,7 +7,7 @@ const messages=document.querySelector(".messages");
 const textMessage=document.querySelector(".send-message-container input")
 const MSG=document.getElementById("msg");
 
-
+let ishidden=false;
 MSG.addEventListener("keypress", function(event) {
     // If the user presses the "Enter" key on the keyboard
     if (event.key === "Enter") {
@@ -29,13 +29,18 @@ socket.on("connect", (name) => {
 });
 socket.on("recieve-event", (MSG) => {
     // console.log(MSG);
-    displayMessage(MSG.message.message,MSG.message.name,"");
+    if(!ishidden){
+        displayMessage(MSG.message.message,MSG.message.name,"");
+        return ishidden=true;
+    }
+    displayMessage(MSG.message.message,"","");
 });
 
 
 send.addEventListener("click",function(){
     if(textMessage.value!=""){
         socket.emit("send-event",{ message: textMessage.value ,name:name});
+        ishidden=false;
         displayMessage(textMessage.value,"","send");
         console.log("sending");
         textMessage.value="";
